@@ -98,7 +98,7 @@ Genove/
 ### 1. Cloner le dépôt
 
 ```bash
-git clone https://github.com/<ton-utilisateur>/Genove.git
+git clone https://github.com/amenallahnjima15/Genove.git
 cd Genove
 ```
 
@@ -177,7 +177,7 @@ Ajoute tes captures dans docs/screenshots/, puis décommente ces lignes :
 
 Projet réalisé lors d'un stage d'été (juillet – août 2026) chez **Genove**, startup EdTech, dans le cadre d'une formation en Business Computing à l'**ESEN Manouba** (Tunisie).
 
-**[Ton Nom]** · [LinkedIn](https://www.linkedin.com/in/ton-profil) · [GitHub](https://github.com/ton-utilisateur)
+**Amen Allah Njima** · [LinkedIn](https://www.linkedin.com/in/amen-allah-njima-8443b5341) · [GitHub](https://github.com/amenallahnjima15)
 
 ## 📄 Licence
 
