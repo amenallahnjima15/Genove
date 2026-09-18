@@ -37,15 +37,33 @@ L'assistant repose sur un pipeline **RAG** (*Retrieval-Augmented Generation*) pi
 ## 🧠 Architecture
 
 ```mermaid
-flowchart LR
-    U["Utilisateur"] --> F["Frontend<br/>React + Tailwind CSS"]
-    F -->|"API REST"| B["Backend<br/>FastAPI"]
-    B --> A1["Agent de routage"]
-    A1 --> A2["Agent de recherche"]
-    A2 <--> C[("ChromaDB<br/>base vectorielle")]
-    A2 --> A3["Agent de synthèse<br/>Qwen3:8B via Ollama"]
-    A3 --> B
-    B <--> P[("PostgreSQL")]
+flowchart TB
+    U(["👤 Utilisateur"])
+    F["🖥️ Frontend<br/>React + Tailwind CSS"]
+    B["⚙️ Backend<br/>FastAPI · API REST"]
+    P[("🐘 PostgreSQL")]
+
+    subgraph RAG ["🧠 Pipeline RAG multi-agents"]
+        direction LR
+        A1["🧭 Agent de<br/>routage"] --> A2["🔎 Agent de<br/>recherche"]
+        A2 <--> C[("🗂️ ChromaDB<br/>base vectorielle")]
+        A2 --> A3["✍️ Agent de synthèse<br/>Qwen3:8B via Ollama"]
+    end
+
+    U <--> F
+    F <--> B
+    B <--> P
+    B <--> RAG
+
+    classDef front fill:#2563eb,stroke:#1e40af,color:#fff
+    classDef back fill:#059669,stroke:#047857,color:#fff
+    classDef db fill:#7c3aed,stroke:#5b21b6,color:#fff
+    classDef agent fill:#ea580c,stroke:#c2410c,color:#fff
+    class U,F front
+    class B back
+    class P,C db
+    class A1,A2,A3 agent
+    style RAG fill:transparent,stroke:#888,stroke-dasharray:5 5
 ```
 
 **Le pipeline RAG en bref :**
