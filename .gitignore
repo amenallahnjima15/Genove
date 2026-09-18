@@ -1,0 +1,27 @@
+# --- Backend (Python) ---
+Backend/.venv/
+Backend/venv/
+Backend/env/
+Backend/__pycache__/
+Backend/**/__pycache__/
+Backend/*.pyc
+Backend/**/*.pyc
+Backend/.env
+Backend/data/chroma_db/
+# Documents personnels utilisés pour tester le RAG (ne pas publier) :
+Backend/data/*.pdf
+
+# --- Frontend (Node / Vite) ---
+Frontend/node_modules/
+Frontend/dist/
+Frontend/dist-ssr/
+Frontend/.output/
+Frontend/.vite/
+Frontend/.tanstack/
+Frontend/.env
+Frontend/*.local
+
+# --- Éditeurs / OS ---
+.DS_Store
+.vscode/
+.idea/

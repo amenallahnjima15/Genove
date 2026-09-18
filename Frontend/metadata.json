@@ -1,0 +1,6 @@
+{
+  "name": "Genove Boost",
+  "description": "Genove Boost AI Platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
